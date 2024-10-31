@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="repkelas" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="afaed825-8a38-4e7f-a33a-19ce502059e3">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from kelas]]>
+	</queryString>
+	<field name="kdkelas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nmkelas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="kdkelas">
+		<groupExpression><![CDATA[$F{kdkelas}]]></groupExpression>
+	</group>
+	<group name="nmkelas">
+		<groupExpression><![CDATA[$F{nmkelas}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="273" y="38" width="238" height="41" forecolor="#333333" uuid="c30f1c73-dc97-4ee9-ae44-373e6ac78c89"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA KELAS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="201" y="15" width="86" height="20" uuid="e77cc765-0c3a-46ec-ba18-0ac5fe2564db"/>
+				<text><![CDATA[Tanggal Cetak :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="287" y="15" width="100" height="20" uuid="7b1e58f5-ce88-440d-8d61-c7ffe747bfec"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="54" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="201" y="0" width="377" height="54" backcolor="#009999" uuid="79d24de2-fcba-480c-aa39-681547c609bc"/>
+				<staticText>
+					<reportElement x="0" y="12" width="170" height="29" forecolor="#FFFFFF" uuid="a986d9c6-75ae-4f82-a7ed-98980db60497"/>
+					<textElement>
+						<font size="18" isBold="true"/>
+					</textElement>
+					<text><![CDATA[KODE KELAS]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="170" y="12" width="207" height="27" forecolor="#FFFFFF" uuid="2e4b2a2e-9aa3-417f-9fe2-28040a284122"/>
+					<textElement>
+						<font size="18" isBold="true"/>
+					</textElement>
+					<text><![CDATA[NAMA KELAS]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField>
+				<reportElement x="201" y="0" width="170" height="27" uuid="d2d902e0-fdeb-4c80-8d7e-c53172d351f4"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kdkelas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="371" y="1" width="207" height="27" uuid="d2d31588-325f-4eb9-82b0-ec4d28cb1cb8"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nmkelas}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

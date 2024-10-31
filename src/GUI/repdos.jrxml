@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="repdos" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1f526474-c328-45db-b591-01ad4315fe06">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="10"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from dosen]]>
+	</queryString>
+	<field name="nidn" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jenkel" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="notlp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="nidn">
+		<groupExpression><![CDATA[$F{nidn}]]></groupExpression>
+	</group>
+	<group name="nama">
+		<groupExpression><![CDATA[$F{nama}]]></groupExpression>
+	</group>
+	<group name="jenkel">
+		<groupExpression><![CDATA[$F{jenkel}]]></groupExpression>
+	</group>
+	<group name="notlp">
+		<groupExpression><![CDATA[$F{notlp}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="233" y="33" width="243" height="32" uuid="8fd2c2a1-8a25-45f1-a5fe-999d1a7155d7"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA DOSEN]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="118" y="15" width="100" height="20" uuid="815c24df-62b7-43c1-8a3b-ec5453dcfaa3"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="15" width="78" height="14" uuid="43fd7223-0f19-48f5-9ac4-1a195275915c"/>
+				<text><![CDATA[Tanggal Cetak :]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="51" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="40" y="0" width="633" height="51" backcolor="#009999" uuid="91b901fc-bf50-4672-8a09-a2b5c09cacf4"/>
+				<staticText>
+					<reportElement x="0" y="11" width="100" height="40" forecolor="#FFFFFF" uuid="f45ec5b5-139d-4cd9-84fb-486fb9c3017a"/>
+					<textElement>
+						<font size="18" isBold="true"/>
+					</textElement>
+					<text><![CDATA[NIDN]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="100" y="11" width="196" height="40" forecolor="#FFFFFF" uuid="05e1a90c-5606-451f-a4c0-080caafdb367"/>
+					<textElement>
+						<font size="18" isBold="true"/>
+					</textElement>
+					<text><![CDATA[NAMA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="296" y="11" width="154" height="40" forecolor="#FFFFFF" uuid="411135d5-48f7-464c-bfb8-6c18a0830ff4"/>
+					<textElement>
+						<font size="18" isBold="true"/>
+					</textElement>
+					<text><![CDATA[JENIS KELAMIN]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="466" y="11" width="166" height="40" forecolor="#FFFFFF" uuid="5aa4451e-766a-4ff8-98cd-5100d9b54c56"/>
+					<textElement>
+						<font size="18" isBold="true"/>
+					</textElement>
+					<text><![CDATA[NO TELEPON]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="40" y="0" width="100" height="34" uuid="4881393f-08c4-4c2c-a6de-80719b117ab3"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nidn}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="0" width="196" height="34" uuid="75a9c2b8-d118-442a-934f-56e177b5b731"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="336" y="4" width="154" height="30" uuid="05fb6242-b8e7-4383-b987-affe9b2cb981"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jenkel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="506" y="0" width="166" height="34" uuid="d455c52a-bd57-4fd5-99cc-db80b8d44bb2"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{notlp}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

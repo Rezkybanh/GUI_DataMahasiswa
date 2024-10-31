@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="repmatkul" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f9823050-74d9-4377-bef6-5addeb3e6e93">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from matkul]]>
+	</queryString>
+	<field name="kdMatkul" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_matkul" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jmlsks" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="semester" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="256" y="45" width="308" height="34" uuid="5ce9ac81-cd42-45ef-a866-6e88ec29fccf"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA MATA KULIAH]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="49" y="15" width="78" height="20" uuid="a10633de-32a3-4947-8948-bb63de43a5cf"/>
+				<text><![CDATA[Tanggal Cetak :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="127" y="15" width="100" height="20" uuid="ad83ed37-5d35-4b89-b021-6ebfae3f718b"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="47" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="49" y="1" width="691" height="46" backcolor="#009999" uuid="768966f0-5d9f-47ad-8a23-96bb2724ff12"/>
+				<staticText>
+					<reportElement x="0" y="14" width="100" height="32" forecolor="#FFFFFF" uuid="621ee566-a95e-48c8-93c3-d856252859c4"/>
+					<textElement>
+						<font size="18" isBold="true"/>
+					</textElement>
+					<text><![CDATA[KODE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="100" y="14" width="210" height="32" forecolor="#FFFFFF" uuid="00db3501-b3ff-4a61-8b92-fd17a345e10b"/>
+					<textElement>
+						<font size="18" isBold="true"/>
+					</textElement>
+					<text><![CDATA[KODE MATKUL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="310" y="14" width="210" height="32" forecolor="#FFFFFF" uuid="e1efca5d-0792-4efc-bf08-96690ea3d955"/>
+					<textElement>
+						<font size="18" isBold="true"/>
+					</textElement>
+					<text><![CDATA[JUMLAH SKS]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="520" y="14" width="171" height="32" forecolor="#FFFFFF" uuid="2ab71c0c-ef91-44c2-a697-c95418360792"/>
+					<textElement>
+						<font size="18" isBold="true"/>
+					</textElement>
+					<text><![CDATA[SEMESTER]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="49" y="0" width="100" height="30" uuid="b99966d2-d33b-4586-bb73-f73271338ecf"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kdMatkul}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="0" width="210" height="30" uuid="90ce9c6c-e891-459e-9ecf-326b3a0c8e27"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_matkul}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="359" y="0" width="210" height="30" uuid="3abb26a5-eea4-4964-a90d-659a176c5bb4"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jmlsks}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="569" y="0" width="171" height="30" uuid="3436d5ce-7dbf-4a96-95e7-e10d1b065f73"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kdmatkul}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

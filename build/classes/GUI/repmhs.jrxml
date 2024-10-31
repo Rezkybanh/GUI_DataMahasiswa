@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="repmhs" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="58a2274f-e8ec-46b1-8d1b-e65b86344be9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="56"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from mahasiswa]]>
+	</queryString>
+	<field name="nim" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jenkel" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jurusan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="nim">
+		<groupExpression><![CDATA[$F{nim}]]></groupExpression>
+	</group>
+	<group name="nama">
+		<groupExpression><![CDATA[$F{nama}]]></groupExpression>
+	</group>
+	<group name="jenkel">
+		<groupExpression><![CDATA[$F{jenkel}]]></groupExpression>
+	</group>
+	<group name="jurusan">
+		<groupExpression><![CDATA[$F{jurusan}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="81" splitType="Stretch">
+			<staticText>
+				<reportElement x="172" y="46" width="330" height="35" uuid="c626c3a9-a649-4807-bc06-fbbc15ace809"/>
+				<textElement>
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA MAHASISWA]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="37" splitType="Stretch">
+			<textField isBlankWhenNull="false">
+				<reportElement x="99" y="15" width="135" height="20" uuid="4622548d-2058-4c90-8b59-520d6bbcdeeb"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="15" width="100" height="20" uuid="e5c78a9b-7614-41cd-9142-fd46c7f3aeca"/>
+				<text><![CDATA[Tanggal Cetak :]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="51" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="20" y="16" width="673" height="35" forecolor="#00CCCC" backcolor="#009999" uuid="326d7b9e-fb27-46ef-8704-2df4d1df7d77"/>
+				<staticText>
+					<reportElement x="0" y="0" width="52" height="35" forecolor="#FFFFFF" uuid="bc78bc36-0df2-4550-829f-a53e700a9107"/>
+					<textElement>
+						<font size="18" isBold="true"/>
+					</textElement>
+					<text><![CDATA[NIM]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="100" y="0" width="193" height="35" forecolor="#FFFFFF" uuid="8e6ea681-c350-4158-b7e9-f8ab1553d67e"/>
+					<textElement>
+						<font size="18" isBold="true"/>
+					</textElement>
+					<text><![CDATA[NAMA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="306" y="0" width="170" height="35" forecolor="#FFFFFF" uuid="0d1ddfff-bf90-4c7f-84da-6202e6d21cbb"/>
+					<textElement>
+						<font size="18" isBold="true"/>
+					</textElement>
+					<text><![CDATA[JENIS KELAMIN]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="489" y="0" width="184" height="35" forecolor="#FFFFFF" uuid="08957cc6-760c-4e95-88e9-6f76eefb349e"/>
+					<textElement>
+						<font size="18" isBold="true"/>
+					</textElement>
+					<text><![CDATA[JURUSAN]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="39" splitType="Stretch">
+			<textField isBlankWhenNull="false">
+				<reportElement x="20" y="0" width="135" height="39" uuid="0e712561-db97-479b-9845-7513d0701d1c"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nim}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement x="120" y="0" width="193" height="39" uuid="9a5f7db5-c985-40f1-9616-63c5d679226c"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement x="326" y="0" width="170" height="39" uuid="e3a5fddf-07cf-4ac3-a0d8-0ca3cc3f4a04"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jenkel}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement x="509" y="0" width="184" height="39" uuid="00597c7e-ae5c-4383-bd5e-6d7d7ecd1bb4"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jurusan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
